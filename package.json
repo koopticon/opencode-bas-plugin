@@ -1,5 +1,5 @@
 {
-    "name": "@btriapitsyn/opencode-bas-plugin",
+    "name": "@fedaykindev/opencode-bas-plugin",
     "version": "0.1.0",
     "description": "Behavior Adjustment System plugin for OpenCode",
     "main": "./dist/index.js",
