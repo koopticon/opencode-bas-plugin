@@ -23,21 +23,21 @@ Project-level configuration takes precedence.
 
 ```json
 {
-  "enabled": true,
-  "adaptiveMode": true,
-  "logging": true,
+  "enabled": true,           // Global toggle for the plugin
+  "adaptiveMode": true,      // If true, detects context from message text; else uses 'default'
+  "logging": true,           // Enables logging of injection events to ~/.config/opencode/behavior-adjustment.log
   "contexts": {
-    "default": {
-      "template": "balanced",
-      "injectionRate": 0.4,
-      "priority": 1,
-      "temperature": 0.3
+    "default": {             // Fallback context
+      "template": "balanced",// Template name to use
+      "injectionRate": 0.4,  // Probability (0.0 to 1.0) of injecting the reminder
+      "priority": 1,         // Priority for deduplication when multiple contexts match
+      "temperature": 0.3     // Optional: model temperature adjustment for this context
     }
   },
   "templates": {
     "balanced": {
-      "type": "behavior",
-      "prompt": [
+      "type": "behavior",    // Arbitrary type string (used for priority-based deduplication)
+      "prompt": [            // The actual content to inject (string or array of strings)
         "<system-reminder>",
         "Maintain technical peer stance. Evaluate before responding.",
         "</system-reminder>"
