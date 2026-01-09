@@ -53,7 +53,7 @@ Add the plugin to your `opencode.json`:
 
 ```json
 {
-  "plugin": ["opencode-bas-plugin"]
+  "plugin": ["@fedaykindev/opencode-bas-plugin"]
 }
 ```
 
