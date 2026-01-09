@@ -39,13 +39,36 @@ jobs:
             echo "version=0.0.0-dev" >> $GITHUB_OUTPUT
           fi
 
+      - name: Extract changelog for release
+        env:
+          VERSION: ${{ steps.get_version.outputs.version }}
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const version = process.env.VERSION;
+          const changelogPath = 'CHANGELOG.md';
+          if (!fs.existsSync(changelogPath)) {
+            throw new Error('CHANGELOG.md not found; add it before releasing.');
+          }
+          const changelog = fs.readFileSync(changelogPath, 'utf8');
+          const sections = changelog.split(/^## /m);
+          const section = sections.find(s => s.startsWith('[' + version + ']'));
+          if (!section) {
+            throw new Error('Changelog section [' + version + '] not found. Add a section like "## [' + version + '] - YYYY-MM-DD".');
+          }
+          const content = ('## ' + section).trim();
+          fs.mkdirSync('artifacts', { recursive: true });
+          fs.writeFileSync('artifacts/release-notes.md', content + '\n');
+          NODE
+
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.get_version.outputs.version }}
           draft: false
-          generate_release_notes: true
+          generate_release_notes: false
+          body_path: artifacts/release-notes.md
           name: v${{ steps.get_version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
